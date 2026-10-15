@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0D12">
+<title>Smart TV Remote</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="tvwrap"><svg class="ico" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="2.5"/><path d="M8 21h8M12 17v4"/></svg><i class="badge"></i></div>
+  <span class="vr"></span>
+  <div class="ttl"><b>Smart TV Remote</b><span>Điều khiển TV của bạn</span></div>
+  <button class="gear" data-tab="more" aria-label="Cài đặt"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+</header>
+
+<main>
+<section id="tab-remote" class="tab on">
+  <div class="remote" id="remote">
+    <button class="rb pow" data-cmd="power" aria-label="Nguồn"><svg class="ic pw" viewBox="0 0 24 24"><path d="M12 3v8.5"/><path d="M7 6.7a7.5 7.5 0 1 0 10 0"/></svg></button>
+    <button class="rb as" data-cmd="assistant" aria-label="Google Assistant"><svg class="ic" viewBox="-2 -2 44 44"><circle cx="11" cy="13" r="11" fill="#2b7bff"/><circle cx="30" cy="18" r="6" fill="#ea4335"/><circle cx="29" cy="33" r="7" fill="#fbbc04"/><circle cx="38" cy="12" r="3" fill="#34a853"/></svg></button>
+    <div class="dpad">
+      <button class="d u" data-cmd="up" data-rep aria-label="Lên"></button>
+      <button class="d r" data-cmd="right" data-rep aria-label="Phải"></button>
+      <button class="d b" data-cmd="down" data-rep aria-label="Xuống"></button>
+      <button class="d l" data-cmd="left" data-rep aria-label="Trái"></button>
+      <button class="okb" data-cmd="ok" aria-label="OK"></button>
+    </div>
+    <div class="row3">
+      <button class="rb sm" data-cmd="menu" aria-label="Menu"><svg class="ic fl" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></button>
+      <button class="rb sm" data-cmd="back" aria-label="Quay lại"><svg class="ic" viewBox="0 0 24 24" style="stroke-width:2.6"><path d="M20 12H4.5M11 5l-7 7 7 7"/></svg></button>
+      <button class="rb sm" data-cmd="home" aria-label="Trang chủ"><svg class="ic fl" viewBox="0 0 24 24"><path d="M12 2.8 2.8 11.2c-.5.5-.2 1.3.5 1.3H5V21h5v-6h4v6h5v-8.5h1.7c.7 0 1-.8.5-1.3z"/></svg></button>
+    </div>
+    <div class="apps">
+      <button class="pill nf" data-cmd="open_netflix"><span>NETFLIX</span></button>
+      <button class="pill pv" data-cmd="open_prime_video"><span>prime video</span><svg viewBox="0 0 50 8"><path d="M3 2c13 6 28 6 42 0M41 0l4.5 2L42 6"/></svg></button>
+      <button class="pill ds" data-cmd="open_disney_plus"><i>Disney+</i><small>hotstar</small></button>
+      <button class="pill ap" data-cmd="open_apps"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>Apps</button>
+    </div>
+    <div class="vol">
+      <button data-cmd="volume_up" data-rep aria-label="Tăng âm lượng"><svg class="ic" viewBox="0 0 24 24" style="stroke-width:2.6"><path d="M12 4v16M4 12h16"/></svg></button>
+      <button data-cmd="volume_down" data-rep aria-label="Giảm âm lượng"><svg class="ic" viewBox="0 0 24 24" style="stroke-width:2.6"><path d="M4 12h16"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section id="tab-tv" class="tab">
+  <div class="sheet">
+    <h2>Hãy chọn một thiết bị</h2>
+    <h4>THIẾT BỊ CÓ SẴN <i id="spin" class="spin"></i></h4>
+    <div id="devlist"></div>
+    <p class="sub" id="nodev"></p>
+    <p class="sub">Để kết nối qua Wi-Fi, hãy đảm bảo điện thoại và TV đều kết nối với cùng một mạng Wi-Fi.</p>
+    <button class="link" id="btn-rescan">Tìm lại thiết bị</button>
+    <details><summary>Nhập IP thủ công / ADB</summary>
+      <div id="status"><i id="dot"></i><span id="stxt">Chưa kết nối</span></div>
+      <div id="devinfo" class="sub">Chưa chọn thiết bị.</div>
+      <label>Địa chỉ IP của TV</label><input id="host" inputmode="decimal" placeholder="192.168.1.50" autocomplete="off">
+      <label>Phương thức</label><select id="method"><option value="atv">Android TV Remote (ghép bằng mã)</option><option value="adb">ADB</option></select>
+      <label>Cổng ADB</label><input id="port" inputmode="numeric" value="5555">
+      <div class="btns"><button class="act" id="btn-connect">Kết nối</button><button class="act alt" id="btn-disc">Ngắt kết nối</button></div>
+      <p class="sub" style="margin-top:14px">ADB Wireless debugging (Android 11+): nhập IP, cổng ghép đôi và mã 6 số.</p>
+      <label>Cổng ghép đôi</label><input id="pport" inputmode="numeric">
+      <label>Mã 6 số</label><input id="pcode" inputmode="numeric" maxlength="6" autocomplete="off">
+      <button class="act" id="btn-pair">Ghép đôi ADB</button>
+    </details>
+  </div>
+</section>
+
+<dialog id="pairdlg">
+  <h3>Ghép đôi với TV</h3>
+  <p class="sub">Nhập mã 6 ký tự đang hiển thị trên màn hình TV.</p>
+  <input id="atvcode" maxlength="6" autocapitalize="characters" autocomplete="off" placeholder="ABC123">
+  <div class="btns"><button class="act alt" id="pair-cancel">Hủy</button><button class="act" id="pair-ok">Xác nhận</button></div>
+</dialog>
+
+<dialog id="backdlg">
+  <h3>Kết nối backend</h3>
+  <p class="sub">Chạy <b>npm start</b> (Termux/máy tính) rồi nhập địa chỉ và token in ra ở đó.</p>
+  <label>Địa chỉ backend</label><input id="b-url" inputmode="url" autocapitalize="off" placeholder="http://127.0.0.1:3000">
+  <label>Token</label><input id="b-token" autocapitalize="off" autocomplete="off">
+  <div class="btns"><button class="act alt" id="b-cancel">Đóng</button><button class="act" id="b-ok">Lưu</button></div>
+</dialog>
+
+<section id="tab-more" class="tab">
+  <div class="card"><h3>Nhập văn bản</h3>
+    <input id="txt" placeholder="Chữ không dấu, số, . , _ @ -" autocomplete="off">
+    <div class="btns"><button class="act alt" id="btn-clr">Xóa</button><button class="act" id="btn-send">Gửi</button></div>
+  </div>
+  <div class="card"><h3>Cài đặt</h3>
+    <label>Tên thiết bị</label><input id="s-name" maxlength="40">
+    <label>Package Netflix</label><input id="s-netflix">
+    <label>Package Prime Video</label><input id="s-prime">
+    <label>Package Disney+</label><input id="s-disney">
+    <button class="act" id="btn-save">Lưu cài đặt</button>
+  </div>
+  <div class="card"><h3>Backend</h3>
+    <p class="sub">Dùng khi mở app từ web/ứng dụng đóng gói file zip.</p>
+    <button class="act" id="btn-backend">Cấu hình địa chỉ backend</button>
+  </div>
+  <div class="card"><h3>Hướng dẫn nhanh</h3>
+    <p class="sub">TV: Cài đặt &gt; Tùy chọn thiết bị &gt; Giới thiệu &gt; bấm "Bản dựng" 7 lần &gt; Tùy chọn nhà phát triển &gt; bật gỡ lỗi USB/mạng. Khi kết nối lần đầu, chọn "Luôn cho phép" trên TV. Xem README để biết thêm.</p>
+  </div>
+</section>
+</main>
+
+<nav>
+  <button class="on" data-tab="remote"><svg class="ico" viewBox="0 0 24 24"><rect x="7.5" y="2" width="9" height="20" rx="3"/><circle cx="12" cy="6.5" r="1.1"/><circle cx="12" cy="12" r=".5"/><circle cx="12" cy="15.5" r=".5"/></svg>Remote</button>
+  <button data-tab="tv"><svg class="ico" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="2.5"/><path d="M8 21h8M12 17v4"/></svg>TV</button>
+  <button data-tab="more"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>More</button>
+</nav>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
